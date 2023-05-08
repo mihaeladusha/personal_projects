@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+button {
+  padding: 0px;
+  margin: 0px;
+  height: 20vh;
+  border-radius: 10px; /* Adding border-radius to each button */
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.emoji-button {
+  max-width: 300px;
+  margin: 5px;
+  flex-grow: 1;
+  flex-basis: calc(25% - 10px);
+  display: flex;
+  flex-direction: column; /* Make the emoji and the text stack vertically */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.emoji-button .emoji {
+  font-size: 2em; /* Making the emoji bigger */
+}
+
+.emoji-button .text {
+  position: relative;
+}
+
+.emoji-button.last-pressed {
+  transform: scale(1.05);
+}
+
+.add-button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  height: 10vh;
+}
+
+.counter {
+  width: 97%;
+  margin: auto;
+  margin-top: 1vh;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 20px;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px 50px;
+  border-radius: 5px;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.modal-content label {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+
+.modal-content input[type="text"] {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.modal-content input[type="color"] {
+  width: 50px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.modal-content button {
+  padding: 5px 10px;
+  width: auto;
+  height: 5vh;
+  max-width: 150px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
